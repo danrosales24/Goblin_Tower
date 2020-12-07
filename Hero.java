@@ -18,4 +18,15 @@ public Hero(){
 	
 	
 	}
+	public void attack(int attP,int heaE, int defE) {
+		System.out.println("You attacked the Goblin for " + attP+ " Dmg");
+		int temp=
+		
+		
+	}
+
+
+
+
+
 }
