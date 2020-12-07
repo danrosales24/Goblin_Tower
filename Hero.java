@@ -1,6 +1,10 @@
 package goblin_Tower;
 
+
+
 public class Hero {
+	
+	
 	int maxHealth;
 	int attackPower;
 	int defensePower;
@@ -48,32 +52,13 @@ public class Hero {
 	
 	
 	
-	public int attack(int attP, int heaE, int defE) {
-		System.out.println("You attacked the Goblin for " + attP + " Dmg");
-		int temp = attP - defE;
-		int x = heaE - temp;
-		System.out.println("The Goblin has " + x + " HP left");
-
-		return x;
-
+	public void attack(Goblin Goblin) {
+		System.out.println("You attacked the Goblin for " + this.attackPower + " Dmg");
+		int temp = this.attackPower - Goblin.getdefensePower();
+		Goblin.setcurrHealth(Goblin.getcurrHealth() - temp);
+		System.out.println("The Goblin has " + Goblin.getcurrHealth() + " HP left");
 	}
 
-	public static void battle(int playerHealth, int goblinHealth) {
-		System.out.println("You have encountered a Goblin get ready to fight ");
-		boolean noknockout = true;
-		while (noknockout) {
-			if (playerHealth == 0) {
-				// GAMEOVER METHOD
-				System.out.println("You have lost all your health GAMEOVER");
-			}
-			if (goblinHealth == 0) {
-				// Cont. METHOD
-				System.out.println("YOU WON    +2 Gold");
-			
-			}
-		
-		
-		}
-	}
+
 
 }
