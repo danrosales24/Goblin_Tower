@@ -54,7 +54,7 @@ public class Hero {
 	
 	public void attack(Goblin Goblin) {
 		System.out.println("You attacked the Goblin for " + this.attackPower + " Dmg");
-		int temp = this.attackPower - Goblin.getdefensePower();
+		int temp = this.attackPower;
 		Goblin.setcurrHealth(Goblin.getcurrHealth() - temp);
 		System.out.println("The Goblin has " + Goblin.getcurrHealth() + " HP left");
 	}

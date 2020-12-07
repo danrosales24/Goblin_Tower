@@ -34,4 +34,15 @@ public class Goblin {
 		return defensePower;
 	} 
 
+	public void attack(Hero Player) {
+		System.out.println("The Goblin attacks you for " + this.attackPower + " Dmg");
+		int temp = this.attackPower;
+		Player.setcurrHealth(Player.getcurrHealth() - temp);
+		System.out.println("You have " + Player.getcurrHealth() + " HP left");
+	}
+	
+	
+	
+	
+	
 }
